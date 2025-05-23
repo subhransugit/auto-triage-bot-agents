@@ -1,0 +1,35 @@
+Title: Troubleshooting Web API Login Issues
+
+Summary:
+This article helps developers troubleshoot login-related errors when accessing our Web API, including incorrect credentials, token issues, and CORS errors.
+
+Steps to Troubleshoot:
+
+1. **Invalid Username or Password**
+   - Ensure you're using the correct case-sensitive credentials.
+   - Reset your password via the Developer Portal if forgotten.
+   - Ensure your account is not locked due to too many failed attempts.
+
+2. **Missing or Expired Token**
+   - All API requests must include a valid Bearer token in the `Authorization` header.
+   - Tokens expire after 30 minutes of inactivity. Renew it using the `/auth/refresh` endpoint.
+   - If using Postman or Swagger, verify the token is being passed in each request.
+
+3. **CORS Policy Errors**
+   - If you see a browser CORS error, ensure the frontend is registered in our Client Origin list.
+   - Add the correct `Access-Control-Allow-Origin` header on the server.
+   - Use server-to-server authentication where CORS is not an issue.
+
+4. **403 Forbidden**
+   - Make sure the API key is active and tied to your IP or domain.
+   - Verify that the user has permissions for the requested endpoint.
+
+5. **401 Unauthorized**
+   - This usually means the token is missing, expired, or malformed.
+   - Ensure you're not using Basic Auth — only Bearer tokens are supported.
+
+6. **Debugging Tools**
+   - Enable full error logging in the Developer Console.
+   - Use `curl -i -H "Authorization: Bearer <token>" https://api.example.com/...` to test endpoints manually.
+
+If the issue persists, email support@yourapi.com with your API key, timestamp, and request ID.

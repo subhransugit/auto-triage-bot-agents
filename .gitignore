@@ -1,0 +1,48 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.log
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Streamlit
+.streamlit/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# FAISS vector index files
+faiss_index/
+*.index
+
+# Environment variables
+.env
+
+# VS Code / IntelliJ / PyCharm
+.vscode/
+.idea/
+
+# Docker artifacts
+*.tar
+*.pid
+
+# Testing artifacts
+htmlcov/
+coverage.*
+*.cover
+.pytest_cache/
+
+# Build and distribution
+build/
+dist/
+*.egg-info/
+
+# Jupyter & notebook checkpoints
+.ipynb_checkpoints/
